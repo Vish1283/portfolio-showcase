@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishmitha | Creative Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="noise"></div>
+    
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="page-transition"></div>
+
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#FF4444"/>
+                        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Plus Jakarta Sans" font-weight="800" font-size="20">V.</text>
+                    </svg>
+                    <span class="logo-text">Vish</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./testimonial.html">Testimonial</a></li>
+                <li><a href="./hire.html" class="cta-button">Let's Talk</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1>Hello, I'm <span class="gradient-text">Vishmitha</span></h1>
+                        <h2>Creative UI/UX Designer</h2>
+                        <h3>Based in Sri Lanka</h3>
+                        <p class="lead">I specialize in creating professional websites and web design, transforming ideas into elegant, responsive solutions. With expertise in UI/UX design and web development, I craft engaging digital experiences that help businesses achieve their goals.</p>
+                        
+                        <div class="cta-group">
+                            <button class="primary-btn" onclick="window.location.href='./hire.html'">
+                                <span>Hire Me</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <a href="assets/vishmitha-cv.pdf" download class="secondary-btn">
+                                <i class="fas fa-file-download"></i>
+                                <span>Download CV</span>
+                            </a>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-pinterest"></i>
+                                <span>Pinterest</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <div class="image-container">
+                            <img src="vishmitha-profile.jpg" alt="Vishmitha - Web Developer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .background-shapes {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.1;
+        }
+
+        .shape-1 {
+            background: var(--primary);
+            width: 500px;
+            height: 500px;
+            top: -250px;
+            right: -100px;
+        }
+
+        .shape-2 {
+            background: var(--accent);
+            width: 300px;
+            height: 300px;
+            bottom: -150px;
+            left: -150px;
+        }
+
+        .shape-3 {
+            background: var(--primary);
+            width: 200px;
+            height: 200px;
+            bottom: 50%;
+            right: 30%;
+        }
+
+        /* Add page transition */
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--background);
+            z-index: 9999;
+            animation: pageTransition 1s ease-in-out forwards;
+        }
+
+        @keyframes pageTransition {
+            0% { transform: scaleY(1); transform-origin: top; }
+            100% { transform: scaleY(0); transform-origin: top; }
+        }
+    </style>
+</body>
+</html> 
